@@ -10,7 +10,6 @@ include('header.php');
 				<div class="listview_1_of_3 images_1_of_3">
 					<h2 style="color:#555;">Next Change</h2>
 					<?php
-                    $con = mysqli_connect("localhost","my_user","my_password","my_db");
                     $qry3=mysqli_query($con, "SELECT * FROM tbl_news LIMIT 5");
 					
 					while($n=mysqli_fetch_array($qry3))
