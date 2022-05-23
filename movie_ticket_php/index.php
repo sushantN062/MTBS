@@ -9,8 +9,9 @@ include('header.php');
 		<div class="content-top">
 				<div class="listview_1_of_3 images_1_of_3">
 					<h2 style="color:#555;">Next Change</h2>
-					<?php 
-					$qry3=mysqli_query($con,"SELECT * FROM tbl_news LIMIT 5");
+					<?php
+                    $con = mysqli_connect("localhost","my_user","my_password","my_db");
+                    $qry3=mysqli_query($con, "SELECT * FROM tbl_news LIMIT 5");
 					
 					while($n=mysqli_fetch_array($qry3))
 					{
@@ -59,9 +60,8 @@ include('header.php');
 					
 					
 		</div>			
-		<?php include('movie_sidebar.php');?>
-	</div>
+
+
 </div>
 <?php include('footer.php');?>
 </div>
-<?php include('searchbar.php');?>
